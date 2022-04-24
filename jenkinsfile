@@ -5,16 +5,19 @@ agent any
         stage('Checkout') {
             steps {
                 echo 'Checkout'
+                checkout scm
             }
         }
         stage('Build') {
             steps {
                 echo 'Building...'
+                sh 'mvn clean package'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing....'
+                sh 'mvn test'
             }
         }
     }
