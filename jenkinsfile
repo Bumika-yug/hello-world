@@ -16,7 +16,7 @@ agent {label 'java'}
         }
         stage('Test') {
             steps {
-                echo 'Testing....Slave node'
+                echo 'Testing....Slave node last try'
                 sh 'mvn test'
             }
         }
